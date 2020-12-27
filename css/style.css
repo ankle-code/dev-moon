@@ -2,6 +2,24 @@
     --backgroundDarkColor: #141010;
     --primaryLightColor: #F70776;
     --primaryDarkColor: #650E36;
+    --textLightColor: #ffffff;
+}
+
+@keyframes starsBackground{
+
+    0%{
+        opacity: 0;
+    }
+
+    15%{
+        opacity: 0.2;
+    }
+
+       100%{
+        left: -150%;
+        width: 250%;
+        opacity: 0;
+    }
 }
 
 body{
@@ -20,8 +38,11 @@ body{
 }
 .background{
     background-image: url(../images/background.png);
-    opacity: 0.15;
+    background-repeat: repeat;
+    animation: starsBackground 30s linear infinite;
     position: absolute;
+    top: 0;
+    left: 0;
     z-index: -1;
     width: 100%;
     height: 100%;
@@ -29,7 +50,6 @@ body{
 
 .container{
     max-width: 60vw;
-    background-color: #fd0;
     margin-left: 25vw;
 }
 
@@ -92,4 +112,61 @@ body{
 
 .Moon__image{
     width: 100%;
+    opacity: 0.3;
+}
+
+.Home{
+    padding-top: 22vh;
+}
+
+.Home__title{
+    color: var(--primaryLightColor);
+    font-weight: 900;
+    font-size: 8rem;
+    margin: 0 0 2vh 0; 
+}
+
+.Home__title--subtitle{
+    color: var(--textLightColor);
+    font-size: 1.75rem;
+    font-weight: 300;
+}
+
+.Home__title--animation{
+    border-right: 3px solid var(--primaryLightColor);
+    padding: 0;
+    display: inline-block;  
+    margin: 10vh 0;
+}
+
+.Home__title--small{
+    font-size: 1.25rem;
+}
+
+.Home__textbox{
+    display: flex;
+    justify-content: space-between;
+    max-width: 45vw;
+}
+
+.Home__text{
+    font-weight: 300;
+    opacity: 0.7;
+    max-width: 210px;
+}
+
+.Home__button{
+    display: block;
+    width: 300px;
+    height: 84px;
+    border-radius: 8px;
+    background-color: var(--primaryLightColor);
+    outline: none;
+    border: none;
+    color: var(--textLightColor);
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 10vh;
+    cursor: pointer;
 }
