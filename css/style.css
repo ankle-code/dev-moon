@@ -22,6 +22,13 @@
     }
 }
 
+@keyframes textPointer{
+
+    100%{
+        border-color: transparent;
+    }
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -40,12 +47,12 @@ body{
     background-image: url(../images/background.png);
     background-repeat: repeat;
     animation: starsBackground 30s linear infinite;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: -1;
     width: 100%;
-    height: 100%;
+    height: 100vh;
 }
 
 .container{
@@ -54,7 +61,7 @@ body{
 }
 
 .menu{
-    max-width: 18vw;
+    max-width: 15vw;
     width: 100%;
     height: 100%;
     background-color: transparent;
@@ -66,7 +73,7 @@ body{
     max-width: 242px;
     padding: 40% 10% 10% 10%;
     min-height: 100px;
-    margin: 0;
+    margin: 0 auto;
 }
 
 .menu__image{
@@ -112,7 +119,7 @@ body{
 
 .Moon__image{
     width: 100%;
-    opacity: 0.3;
+    opacity: 0.6;
 }
 
 .Home{
@@ -122,8 +129,8 @@ body{
 .Home__title{
     color: var(--primaryLightColor);
     font-weight: 900;
-    font-size: 8rem;
-    margin: 0 0 2vh 0; 
+    font-size: 10rem;
+    margin: 0 0 1vh 0; 
 }
 
 .Home__title--subtitle{
@@ -132,11 +139,18 @@ body{
     font-weight: 300;
 }
 
-.Home__title--animation{
+.Home__title--autowrite{
     border-right: 3px solid var(--primaryLightColor);
     padding: 0;
     display: inline-block;  
     margin: 10vh 0;
+    height: 36px;
+    animation-delay: 6s;
+    animation: textPointer 1s ease-in-out infinite 6s;
+}
+
+.Home__textbox--autowrite{
+    display: block;
 }
 
 .Home__title--small{
@@ -169,4 +183,31 @@ body{
     letter-spacing: 0.5px;
     margin-bottom: 10vh;
     cursor: pointer;
+}
+
+.Section{
+    margin-top: 25vh;
+}
+
+.Section__title{
+    color: var(--primaryLightColor);
+    font-size: 2.5rem;
+}
+
+.Section__title--subtitle{
+    font-size: 1.5rem;
+}
+
+.Section__text{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+.Draw{
+    max-width: 650px;
+    margin: 7vh auto;
+}
+
+.Draw__image{
+    width: 100%;
 }
