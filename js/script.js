@@ -36,7 +36,7 @@ let previousPagePosition = 0;
 const menuBorder = document.querySelectorAll('.menu__border');
 const menuItem = document.querySelectorAll('.menu__item');
 
-document.addEventListener('scroll', function(e){
+document.addEventListener('scroll', function(){
     if(pageYOffset >= 1000){
         moonOpacity = 0;
     }
@@ -44,36 +44,46 @@ document.addEventListener('scroll', function(e){
         moonOpacity = 0.6;
     }
     if(pageYOffset > previousPagePosition && moonOpacity >= 0 && pageYOffset >= 200){
-        moonOpacity -= 0.09;
+        moonOpacity -= 0.050;
         moon.style.opacity = moonOpacity;
     }
     if(pageYOffset < previousPagePosition && moonOpacity <= 0.6 && pageYOffset <= 1000){
-        moonOpacity += 0.09;
+        moonOpacity += 0.050;
         moon.style.opacity = moonOpacity;
     }
     previousPagePosition = pageYOffset;
+
+    console.log(pageYOffset)
     
-    addBorderPosition();
+    addMenuBorderPosition();
 
 });
 
-function addBorderPosition(){
+function addMenuBorderPosition(){
     
     if(pageYOffset >= Number(menuItem[0].value)){
-        menuBorder.forEach(removeBorderAll);
+        menuBorder.forEach(removeMenuBorderAll);
         menuBorder[0].classList.add('menu__border--on');
     }
     if(pageYOffset >= Number(menuItem[1].value)){
-        menuBorder.forEach(removeBorderAll);
+        menuBorder.forEach(removeMenuBorderAll);
         menuBorder[1].classList.add('menu__border--on');
     }    
     if(pageYOffset >= Number(menuItem[2].value)){
-        menuBorder.forEach(removeBorderAll);
+        menuBorder.forEach(removeMenuBorderAll);
         menuBorder[2].classList.add('menu__border--on');
-    }     
+    }    
+    if(pageYOffset >= Number(menuItem[3].value)){
+        menuBorder.forEach(removeMenuBorderAll);
+        menuBorder[3].classList.add('menu__border--on');
+    }   
+    if(pageYOffset >= Number(menuItem[4].value)){
+        menuBorder.forEach(removeMenuBorderAll);
+        menuBorder[4].classList.add('menu__border--on');
+    }   
 };
 
-function removeBorderAll(el){
+function removeMenuBorderAll(el){
     el.classList.remove('menu__border--on');
 };
 

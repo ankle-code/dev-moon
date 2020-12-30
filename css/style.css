@@ -1,7 +1,8 @@
 :root{
     --backgroundDarkColor: #141010;
-    --primaryLightColor: #F70776;
+    --backgroundTextDarkColor: #2F2E41;
     --primaryDarkColor: #650E36;
+    --primaryLightColor: #F70776;
     --textLightColor: #ffffff;
 }
 
@@ -56,7 +57,7 @@ body{
 }
 
 .container{
-    max-width: 60vw;
+    max-width: 70vw;
     margin-left: 25vw;
 }
 
@@ -132,7 +133,7 @@ body{
 .Home__title{
     color: var(--primaryLightColor);
     font-weight: 900;
-    font-size: 10rem;
+    font-size: 8rem;
     margin: 0 0 1vh 0; 
 }
 
@@ -163,7 +164,7 @@ body{
 .Home__textbox{
     display: flex;
     justify-content: space-between;
-    max-width: 45vw;
+    max-width: 35vw;
 }
 
 .Home__text{
@@ -215,6 +216,12 @@ body{
     width: 100%;
 }
 
+
+.Draw__image--margin{
+    margin-top: 15vh;
+    margin-bottom: 15vh;
+}
+
 .Gallery{
     display: flex;
     flex-wrap: wrap;
@@ -227,4 +234,111 @@ body{
     border-radius: 10px;
     margin-bottom: 3%;
     cursor: pointer;
+}
+
+.Picture{
+    display: inline-block;
+    border: 15px solid var(--backgroundDarkColor);
+    background-color: var(--backgroundDarkColor);
+    border-radius: 50%;
+    margin: 0 0 0 -5px;
+}
+
+.Picture__image{
+    display: inline;
+    max-width: 230px;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.Team{
+    max-width: 43%;
+    margin: 50px ;
+    display: inline-block;
+}
+
+.Team__header{
+    background-color: var(--primaryLightColor);
+    border-radius: 200px;
+    max-height: 225px;
+    display: flex;
+    align-items: center;
+    margin-bottom: -100px;
+    position: relative;
+}
+
+.Team__title{
+    font-size: 2.75rem;
+    font-style: italic;
+    margin: 0 50px;
+}
+
+.Team__Subtitle{
+    color: var(--primaryDarkColor);
+    font-weight: 300;
+    font-size: 2rem;
+    margin: 20px 50px;
+}
+
+.Team__content{
+    background-color: var(--backgroundTextDarkColor);
+    height: 175px;
+    width: 95%;
+    border-radius: 44px;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+.Team__text{
+    margin: 40px 25px 25px 25px;
+}
+
+.Team__text--highlight{
+    margin-top: 0px;
+    font-weight: 800;
+}
+
+.Footer{
+    background-color: var(--primaryLightColor);
+    max-width: 85vw;
+    margin-left: 15vw;
+}
+
+.Footer__wrap{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 10vw;
+}
+
+.Footer__textbox{
+    color: var(--textLightColor);
+}
+
+.Footer__title{
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.Footer__text{
+    color: var(--backgroundTextDarkColor);
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+.Footer__text--credits{
+    color: var(--textLightColor);
+    font-weight: 300;
+    margin: 5px 10vh;
+}
+
+.Footer__text--highlight{
+    font-weight: 800;
+}
+
+.Footer__credits{
+    background-color: var(--backgroundTextDarkColor);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
 }
