@@ -27,5 +27,61 @@ function autoWriteFunc(){
         }
     }
     phraseCount++;
-}
+};
 
+const moon = document.getElementById('moon');
+let moonOpacity = 0.6;
+let previousPagePosition = 0;
+
+const menuBorder = document.querySelectorAll('.menu__border');
+const menuItem = document.querySelectorAll('.menu__item');
+
+document.addEventListener('scroll', function(e){
+    if(pageYOffset >= 1000){
+        moonOpacity = 0;
+    }
+    if(pageYOffset === 0){
+        moonOpacity = 0.6;
+    }
+    if(pageYOffset > previousPagePosition && moonOpacity >= 0 && pageYOffset >= 200){
+        moonOpacity -= 0.09;
+        moon.style.opacity = moonOpacity;
+    }
+    if(pageYOffset < previousPagePosition && moonOpacity <= 0.6 && pageYOffset <= 1000){
+        moonOpacity += 0.09;
+        moon.style.opacity = moonOpacity;
+    }
+    previousPagePosition = pageYOffset;
+    
+    addBorderPosition();
+
+});
+
+function addBorderPosition(){
+    
+    if(pageYOffset >= Number(menuItem[0].value)){
+        menuBorder.forEach(removeBorderAll);
+        menuBorder[0].classList.add('menu__border--on');
+    }
+    if(pageYOffset >= Number(menuItem[1].value)){
+        menuBorder.forEach(removeBorderAll);
+        menuBorder[1].classList.add('menu__border--on');
+    }    
+    if(pageYOffset >= Number(menuItem[2].value)){
+        menuBorder.forEach(removeBorderAll);
+        menuBorder[2].classList.add('menu__border--on');
+    }     
+};
+
+function removeBorderAll(el){
+    el.classList.remove('menu__border--on');
+};
+
+menuBorder.forEach(addClick);
+
+function addClick(el){
+    el.addEventListener('click',function(e){
+        const positionTarget = e.target.value;
+        window.scrollTo(0,Number(positionTarget))
+    })
+};

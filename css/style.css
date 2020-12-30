@@ -105,8 +105,11 @@ body{
 }
 
 .menu__border:hover{
-    border-color: var(--primaryLightColor);
     color: var(--primaryLightColor);
+}
+
+.menu__border--on{
+    border-color: var(--primaryLightColor);
 }
 
 .Moon{
@@ -210,4 +213,18 @@ body{
 
 .Draw__image{
     width: 100%;
+}
+
+.Gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.Gallery__image{
+    max-width: 47%;
+    border: 5px solid var(--primaryLightColor);
+    border-radius: 10px;
+    margin-bottom: 3%;
+    cursor: pointer;
 }
