@@ -190,7 +190,7 @@ body{
 }
 
 .Section{
-    margin-top: 25vh;
+    margin-top: 25%;
 }
 
 .Section__title{
@@ -214,12 +214,6 @@ body{
 
 .Draw__image{
     width: 100%;
-}
-
-
-.Draw__image--margin{
-    margin-top: 15vh;
-    margin-bottom: 15vh;
 }
 
 .Gallery{
@@ -252,9 +246,14 @@ body{
 }
 
 .Team{
-    max-width: 43%;
-    margin: 50px 20px;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.Team__wrap{
+    max-width: 600px;
+    margin: 20px;
 }
 
 .Team__header{
@@ -329,6 +328,7 @@ body{
     color: var(--textLightColor);
     font-weight: 300;
     margin: 5px 10vw;
+    padding: 5px 0;
 }
 
 .Footer__text--highlight{

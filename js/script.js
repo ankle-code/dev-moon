@@ -53,7 +53,8 @@ document.addEventListener('scroll', function(){
     }
     previousPagePosition = pageYOffset;
 
-    console.log(pageYOffset)
+    console.log(scrollY)
+    console.log(document.querySelectorAll('.Section__title')[3].scrollY);
     
     addMenuBorderPosition();
 
